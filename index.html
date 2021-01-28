@@ -8,13 +8,36 @@
 			button {
 				padding: 10px;
 				margin: 3px;
+				cursor: pointer;
+				font-size: 19px;
 			}
 		</style>
 	</head>
 	<body>
-		<main>
-			<div class="output"></div>
-			<div class="calculator">
+		<main
+			style="
+				width: 400px;
+				display: block;
+				margin: auto;
+				background-color: aquamarine;
+				margin-top: 70px;
+			"
+		>
+			<div
+				class="output"
+				style="
+					height: 50px;
+					background-color: rebeccapurple;
+					color: white;
+					font-size: 22px;
+					font-weight: 600;
+					padding: 5px;
+				"
+			></div>
+			<div
+				class="calculator"
+				style="display: grid; grid-template-columns: 80px 80px 80px 80px 80px"
+			>
 				<button>0</button>
 				<button>1</button>
 				<button>2</button>
@@ -31,7 +54,7 @@
 				<button>*</button>
 				<button>/</button>
 			</div>
-			<button class="result">=</button>
+			<button class="result" style="padding: 15px 70px">=</button>
 		</main>
 
 		<script src="app.js"></script>

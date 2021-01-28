@@ -2,11 +2,11 @@ const buttons = document.querySelector('.calculator');
 const output = document.querySelector('.output');
 const result = document.querySelector('.result');
 
-// let rightSide = [];
+// Initial value
 let rightSide = [];
 let leftSide = [];
 let operator = '';
-// output.innerText = convertToNum(rightSide.join(''));
+// Input all number
 buttons.addEventListener('click', (e) => {
 	if (operator == '' && isNaN(convertToNum(e.target.innerText)) == false) {
 		rightSide.push(convertToNum(e.target.innerText));
@@ -19,6 +19,7 @@ buttons.addEventListener('click', (e) => {
 	output.innerText = `${rightSide.join('')}${operator}${leftSide.join('')}`;
 });
 
+// Getting the result
 result.addEventListener('click', () => {
 	if (rightSide.length != 0 && leftSide.length != 0) {
 		output.innerText = operation(
@@ -31,9 +32,12 @@ result.addEventListener('click', () => {
 		operator = '';
 	}
 });
+//text to number convert
 const convertToNum = (text) => {
 	return parseFloat(text);
 };
+
+// Main operation
 const operation = (a, b, operator) => {
 	switch (operator) {
 		case '+':
